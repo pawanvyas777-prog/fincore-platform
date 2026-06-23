@@ -2,6 +2,17 @@ spring:
   application:
     name: account-service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fincore
+    username: postgres
+    password: postgres
+
+  flyway:
+    schemas: account
+    default-schema: account
+    table: flyway_schema_history
+    baseline-on-migrate: true
+
 server:
   port: 8083
 

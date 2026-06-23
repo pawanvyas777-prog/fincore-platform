@@ -2,6 +2,16 @@ spring:
   application:
     name: transaction-service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fincore
+    username: postgres
+    password: postgres
+
+  flyway:
+    schemas: transaction
+    default-schema: transaction
+    table: flyway_schema_history
+
 server:
   port: 8084
 
